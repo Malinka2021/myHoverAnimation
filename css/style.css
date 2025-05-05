@@ -9,6 +9,9 @@
     --secondary-color-text: #717471;
     --secondary-color-line: #f3e9f9;  
 }
+* {
+    font-family: "Roboto", sans-serif; /* Default font for all elements */
+}
 .container {
     width: 75%;
     margin: 0 auto;  /* Center the container */
@@ -20,12 +23,22 @@
 }
 .menu-list ul li{
     display: inline-block; /* Display list items in a row */
-    margin-right: 48px; /* Space between items */
+    margin-right: 64px; /* Space between items */
     padding: 10px 0; /* Space above and below */
-    font-family: 'Russo One', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--primary-color-text);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary-color-text); /* Text color */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    
+}
+.menu-list ul li a{
+    display: inline-block;  /* otherwise transform won't work */
+    color: inherit; /* Inherit color from parent */
     text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+.menu-list ul li:hover{
+    /*color: var(--primary-color-headlines); /* Change color on hover */
+    transform: scale(1.5); /* Scale up on hover */
+    text-shadow: 4px 4px 3px var(--primary-color-text), 8px 8px 3px var(--primary-color-text); /* Add shadow effect */
+    transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out; /* Smooth transition for scaling and shadow */
 }
