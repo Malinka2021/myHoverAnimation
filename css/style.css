@@ -55,11 +55,57 @@
 .gallery-item img{
     width: 300px; 
     height: 180px; 
+    object-fit: cover;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
 }
 .gallery img:hover{
     transform: scale(1.05); /* Scale up on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+.profile-details button {
+    display: block;
+    background-color: var(--primary-color-buttons);
+    color: var(--primary-color-headlines);
+    font-size: 24px;
+    width: 264px;
+    border: none;
+    padding: 14px 20px;
+    margin-left: 24px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.profile-details button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+.contact-form {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+.contact-form form {
+    text-align: start;
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: var(--primary-color-buttons);
+    border: none;
+}
+
+input {
+    height: 34px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-sizing: border-box;
+    border-top: 2px solid var(--primary-color-text);
+    border-left: 2px solid var(--primary-color-text);
 }
